@@ -8,6 +8,7 @@
     "npm": "10.2.4"
   },
   "scripts": {
+    "prebuild": "/tools/scripts/pre-build.sh",
     "dev": "./tools/scripts/dev.sh",
     "dev:preset": "./tools/scripts/dev.preset.sh",
     "build": "next build",
