@@ -5,7 +5,6 @@
     <a href="https://github.com/blockscout/blockscout/blob/master/README.md">Blockscout</a>
     <span> blockchain explorer</span>
 </p>
-
 ## Running and configuring the app
 
 App is distributed as a docker image. Here you can find information about the [package](https://github.com/blockscout/frontend/pkgs/container/frontend) and its recent [releases](https://github.com/blockscout/frontend/releases).
