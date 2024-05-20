@@ -20,7 +20,7 @@ const TopBar = () => {
       justifyContent="space-between"
       alignItems="center"
     >
-      <TopBarStats/>
+      <div/>
       <Flex alignItems="center">
         { feature.isEnabled && (
           <>
