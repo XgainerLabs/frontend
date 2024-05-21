@@ -5,7 +5,6 @@ import config from 'configs/app';
 
 import ColorModeSwitch from './ColorModeSwitch';
 import SwapButton from './SwapButton';
-import TopBarStats from './TopBarStats';
 
 const feature = config.features.swapButton;
 
