@@ -40,27 +40,20 @@ const TokenBalances = () => {
 
   const tokensInfo = getTokensTotalInfo(tokenQuery.data);
   const prefix = tokensInfo.isOverflow ? '>' : '';
-  const totalUsd = nativeUsd.plus(tokensInfo.usd);
   const tokensNumText = tokensInfo.num > 0 ?
-    ` | ${ prefix }${ tokensInfo.num } ${ tokensInfo.num > 1 ? 'tokens' : 'token' }` :
+    `${ prefix }${ tokensInfo.num } ${ tokensInfo.num > 1 ? 'tokens' : 'token' }` :
     '';
 
   return (
     <Flex columnGap={ 3 } rowGap={ 3 } mt={{ base: '6px', lg: 0 }} flexDirection={{ base: 'column', lg: 'row' }}>
       <TokenBalancesItem
-        name="Net Worth"
-        value={ addressData?.exchange_rate ? `${ prefix }$${ totalUsd.toFormat(2) } USD` : 'N/A' }
-        isLoading={ addressQuery.isPending || tokenQuery.isPending }
-      />
-      <TokenBalancesItem
-        name={ `${ currencyUnits.ether } Balance` }
-        value={ (!nativeUsd.eq(ZERO) ? `$${ nativeUsd.toFormat(2) } USD | ` : '') + `${ nativeValue } ${ currencyUnits.ether }` }
+        name={`${ currencyUnits.ether } Balance` }
+        value={`${ nativeValue } ${ currencyUnits.ether }`}
         isLoading={ addressQuery.isPending || tokenQuery.isPending }
       />
       <TokenBalancesItem
         name="Tokens"
         value={
-          `${ prefix }$${ tokensInfo.usd.toFormat(2) } USD ` +
           tokensNumText
         }
         isLoading={ addressQuery.isPending || tokenQuery.isPending }
